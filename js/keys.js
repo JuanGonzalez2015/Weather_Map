@@ -1,0 +1,2 @@
+const TOKEN = "pk.eyJ1Ijoic29uZXJvODQiLCJhIjoiY2twcjJvdndwMGVpYTJ2bWxqYTVtNG0ybiJ9.qQmIxkmUL5gpam5YVlwsCA";
+const WEATHERMAP_TOKEN = "c60888440c8b3791360556f6392eff3d";
