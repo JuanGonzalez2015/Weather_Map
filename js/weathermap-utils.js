@@ -4,8 +4,11 @@ const key = WEATHERMAP_TOKEN;
 
 
 //gets the weather properties based on location for 5 days very 3 hours, and diplays 40 objects on the console
+// fetch provides the js  access to manipulate parts of the HTTP
 function weatherMap( lat, lon ) {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}`)
+        /// .then method returns a promise takes up to two arguments; callback functions for the success and
+        // failure cases of the Promise
         .then(function(resp) { return resp.json() }) // Convert data to json
         .then(function(data) {
             console.log(data)
@@ -18,6 +21,8 @@ function weatherMap( lat, lon ) {
                 listOfFiveDays[date].days.push(d)
             } )
             console.log(listOfFiveDays)
+            //returns an array of a given object's own enumerable property names,
+            // iterated in the same order that a normal loop would
             Object.keys(listOfFiveDays).map((value,index)=> {
                 drawWeather(listOfFiveDays[value].days[0], index, data.city)
             })
