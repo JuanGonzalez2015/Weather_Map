@@ -1,0 +1,25 @@
+body{
+    font-family: 'Archivo Black', sans-serif;
+    background-image: url("../assests/pexels-skitterphoto-3768.jpg")
+
+
+}
+
+.navbar-brand {
+    font-size: 50px;
+}
+
+.navbar{
+    display: flex;
+}
+.col-sm{
+    background-color: lightgrey;
+    border-style: solid;
+    border-color: white;
+}
+
+#map{
+    justify-content: center;
+    display: flex;
+
+}
