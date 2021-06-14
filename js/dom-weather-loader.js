@@ -10,6 +10,7 @@ function drawWeather( d, id,city,dt_txt ) {
     document.getElementById(`temp-${id}`).innerHTML = celsius + '&deg;';
     document.getElementById(`temp-${id}`).innerHTML = fahrenheit + '&deg;';
     document.getElementById(`location-${id}`).innerHTML = city.name;
+    // document.getElementById(`location-${id}`).innerHTML = city.name;
 
 
 
