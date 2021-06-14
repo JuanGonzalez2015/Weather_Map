@@ -1,12 +1,17 @@
 
-function drawWeather( d, id,city ) {
-    var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+function drawWeather( d, id,city,dt_txt ) {
+    var celsius = Math.round(parseFloat(d.main.temp)-273.15);
     var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
     var description = d.weather[0].description;
 
+
+
     document.getElementById(`description-${id}`).innerHTML = description;
-    document.getElementById(`temp-${id}`).innerHTML = celcius + '&deg;';
+    document.getElementById(`temp-${id}`).innerHTML = celsius + '&deg;';
+    document.getElementById(`temp-${id}`).innerHTML = fahrenheit + '&deg;';
     document.getElementById(`location-${id}`).innerHTML = city.name;
+
+
 
     if( description.indexOf('rain') > 0 ) {
         document.body.className = 'rainy';
